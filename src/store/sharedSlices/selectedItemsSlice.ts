@@ -1,8 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "store";
+import { v4 as uuidV4 } from "uuid";
+import { SelectedItem } from "./types";
 
 export interface SelectedItemsState {
-  selectedItems: string[];
+  selectedItems: SelectedItem[];
 }
 
 const initialState: SelectedItemsState = {
@@ -14,11 +16,13 @@ export const selectedItemsListSlice = createSlice({
   initialState,
   reducers: {
     addItem: (state, action: PayloadAction<string>) => {
-      state.selectedItems = [...state.selectedItems, action.payload];
+      const newItem = { id: uuidV4(), title: action.payload };
+
+      state.selectedItems = [...state.selectedItems, newItem];
     },
     removeItem: (state, action: PayloadAction<string>) => {
       state.selectedItems = [
-        ...state.selectedItems.filter((item) => item !== action.payload),
+        ...state.selectedItems.filter((item) => item.id !== action.payload),
       ];
     },
     clearSelectedItems: (state) => {

@@ -22,11 +22,11 @@ export const SelectedItemsList: React.FC = () => {
     >
       {selectedItemsList.length !== 0 && <Typography>Tap to delete</Typography>}
 
-      {selectedItemsList.map((item) => (
+      {selectedItemsList.map((item, index) => (
         <Chip
-          key={item}
-          label={item}
-          onClick={() => dispatch(removeItem(item))}
+          key={item.id}
+          label={item.title}
+          onClick={() => dispatch(removeItem(item.id))}
           color="primary"
           sx={{ margin: "5px" }}
         />
