@@ -1,4 +1,4 @@
-![project screenshot](https://github.com/farhad-gh-dev/code-challenge/blob/main/public/project-screenshot.jpg)
+![project screenshot](https://raw.githubusercontent.com/farhad-gh-dev/charisma-challenge/master/src/assets/project-screenshot.png)
 
 This project was a coding challenge for Charisma.
 
