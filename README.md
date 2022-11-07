@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+![project screenshot](https://github.com/farhad-gh-dev/code-challenge/blob/main/public/project-screenshot.jpg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+This project was a coding challenge for Charisma.
 
-## Available Scripts
+## Start Guide
 
-In the project directory, you can run:
+First, install the dependencies:
 
-### `npm start`
+```bash
+npm run install
+# or
+yarn install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Then, run the development server:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+npm run start
+# or
+yarn start
+```
 
-### `npm test`
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech stack
 
-### `npm run build`
+React JS, Typescript, Redux Toolkit, Material UI
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Folder Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- In order to scale the application in the easiest and most maintainable way, I keep most of the code inside the features folder, which should contain different feature-based things. The idea is that you should be able to add or remove a feature and all of it's specific dependencies in a folder in features directory. a feature will contain everything form api calls to sub-components(the ones only used for this feature) and local hooks. This will allow you to keep functionalities scoped to a feature and not mix its declarations with shared things.
+- In assets directory we have our images, fonts, videos, ...
+- store directory contain our store settings, store hooks and shared slices
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This was inspired by bulletproof-react repo in github.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+    .
+    ├─── public
+    └─── src
+        ├─── assets
+        ├─── features
+        └─── store
