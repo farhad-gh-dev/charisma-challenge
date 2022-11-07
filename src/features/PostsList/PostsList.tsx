@@ -25,8 +25,8 @@ export const PostsList: React.FC = () => {
 
   const filteredPosts = postsList.filter(
     (post) =>
-      post.title.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1 ||
-      post.description.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1
+      post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      post.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   useEffect(() => {
