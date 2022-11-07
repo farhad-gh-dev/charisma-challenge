@@ -24,7 +24,9 @@ export const UsersList: React.FC = () => {
   const dispatch = useAppDispatch();
 
   const filteredUsers = usersList.filter(
-    (user) => user.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1
+    (user) =>
+      user.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1 ||
+      user.email.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1
   );
 
   useEffect(() => {
